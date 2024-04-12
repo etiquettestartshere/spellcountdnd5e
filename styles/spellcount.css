@@ -1,0 +1,6 @@
+.dnd5e2 .items-section .items-header .item-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
