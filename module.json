@@ -1,7 +1,7 @@
 {
   "id": "spellcountdnd5e",
   "title": "Spell Count",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "compatibility": {
     "minimum": "11",
     "verified": "11"
