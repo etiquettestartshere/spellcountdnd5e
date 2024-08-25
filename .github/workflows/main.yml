@@ -34,7 +34,6 @@ jobs:
 
       # Substitute the Manifest and Download URLs in the module.json
       # for a PRE RELEASE.
-
       - name: Substitute Manifest and Download Links For Versioned Ones
         if: 'github.event.release.prerelease'
         id: sub_prerelease_manifest_version
@@ -52,8 +51,10 @@ jobs:
       - name: Create ZIP archive
         run: zip -r ./module.zip module.json LICENSE styles/ scripts/
 
+
       # Create a release for this specific version.
       - name: Update Release with Files
+        if: '!github.event.release.prerelease'
         id: create_version_release
         uses: ncipollo/release-action@v1
         with:
@@ -68,6 +69,7 @@ jobs:
 
       # Create a release for this specific version.
       - name: Update Pre-release with Files
+        if: 'github.event.release.prerelease'
         id: create_version_prerelease
         uses: ncipollo/release-action@v1
         with:

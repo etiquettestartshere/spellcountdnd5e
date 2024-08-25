@@ -1,10 +1,10 @@
 {
   "id": "spellcountdnd5e",
   "title": "Spell Count",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "compatibility": {
     "minimum": "11",
-    "verified": "11"
+    "verified": "12"
   },
   "esmodules": ["scripts/setup.mjs"],
   "styles": ["styles/spellcount.css"],
@@ -13,7 +13,7 @@
       {
         "id": "dnd5e",
         "type": "system",
-        "compatibility": {"minimum": "3.1.0", "maximum": "3.2.9999"}
+        "compatibility": {"minimum": "3.2.0", "maximum": "3.3.9999"}
       }
     ]
   },
