@@ -15,7 +15,12 @@ export class spellcount {
     const headers = html.querySelectorAll('div[data-type="spell"]');
     for (const header of headers) {
       const type = header.querySelector('h3[class="item-name spell-header"]').textContent;
-      if (app._mode === 1 && !type.includes('Innate') && !type.includes('At-Will') && !type.includes('Cantrip') && !type.includes('Pact')) {
+      if (app._mode === 1 && 
+      !type.includes('Innate') && 
+      !type.includes('At-Will') && 
+      !type.includes('Cantrip') && 
+      !type.includes('Pact') &&
+      !type.includes('Ritual Only')) {
         const controls = header.querySelector('div[class="item-header item-controls"]');
         controls.textContent = `${prep}`;
         controls.setAttribute("data-tooltip", "Total Prepared Spells");
